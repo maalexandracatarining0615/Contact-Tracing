@@ -16,5 +16,13 @@ namespace Contact_Tracing_v1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ContactTracingForm f2 = new ContactTracingForm();
+            f2.Show();
+            this.Hide();
+
+        }
     }
 }

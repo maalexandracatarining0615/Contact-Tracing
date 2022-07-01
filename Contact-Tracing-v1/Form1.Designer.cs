@@ -64,7 +64,7 @@
             this.button1linkedtoForm2.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1linkedtoForm2.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1linkedtoForm2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1linkedtoForm2.Location = new System.Drawing.Point(137, 344);
+            this.button1linkedtoForm2.Location = new System.Drawing.Point(137, 346);
             this.button1linkedtoForm2.Name = "button1linkedtoForm2";
             this.button1linkedtoForm2.Size = new System.Drawing.Size(128, 35);
             this.button1linkedtoForm2.TabIndex = 2;
@@ -74,12 +74,15 @@
             // 
             // button2linkedtoForm3
             // 
-            this.button2linkedtoForm3.Location = new System.Drawing.Point(166, 385);
+            this.button2linkedtoForm3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2linkedtoForm3.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2linkedtoForm3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2linkedtoForm3.Location = new System.Drawing.Point(137, 384);
             this.button2linkedtoForm3.Name = "button2linkedtoForm3";
-            this.button2linkedtoForm3.Size = new System.Drawing.Size(75, 23);
+            this.button2linkedtoForm3.Size = new System.Drawing.Size(128, 30);
             this.button2linkedtoForm3.TabIndex = 3;
-            this.button2linkedtoForm3.Text = "button1";
-            this.button2linkedtoForm3.UseVisualStyleBackColor = true;
+            this.button2linkedtoForm3.Text = "CONTACT US";
+            this.button2linkedtoForm3.UseVisualStyleBackColor = false;
             this.button2linkedtoForm3.Click += new System.EventHandler(this.button2linkedtoForm3_Click);
             // 
             // Form1
@@ -88,7 +91,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(388, 450);
+            this.ClientSize = new System.Drawing.Size(388, 426);
             this.Controls.Add(this.button2linkedtoForm3);
             this.Controls.Add(this.button1linkedtoForm2);
             this.Controls.Add(this.amisafetext);

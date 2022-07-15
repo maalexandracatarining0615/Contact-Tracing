@@ -27,7 +27,9 @@ namespace Contact_Tracing_v1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form4 f4 = new Form4();
+            f4.Show();
+            this.Hide();
         }
     }
 }

@@ -36,49 +36,79 @@
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            StreamWriter file = new StreamWriter(@"C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\RespondentsList.txt", true);
-            file.WriteLine("First Name: " + FirstN.Text);
-            file.WriteLine("Middle Name: " + MidN.Text);
-            file.WriteLine("Last Name: " + LastN.Text);
-            file.WriteLine("Suffix: " + Suffix.Text);
-            file.WriteLine("Age: " + AgeBox.Text);
-            file.WriteLine("Sex: " + SexBox.Text);
-            file.WriteLine("Body Temperature: " + TempBox.Text);
-            file.WriteLine("Region: " + RegionPicker.Text);
-            file.WriteLine("Province: " + ProvBox.Text);
-            file.WriteLine("Municilapity: " + CityBox.Text);
-            file.WriteLine("Barangay: " + BrgyBox.Text);
-            file.WriteLine("Email Address: " + EmailAd.Text);
-            file.WriteLine("Contact Number: " + ContactNo.Text);
-            file.WriteLine("Date and Time: " + DateandTime.Text);
-            file.WriteLine("Nature of Visit: " + VisitPurpose.Text);
-         
+                        bool all = true;
+            if (string.IsNullOrEmpty(FirstN.Text))
+                all = false;
+            else if (string.IsNullOrEmpty(LastN.Text))
+                all = false;
+            else if (string.IsNullOrEmpty(RegionPicker.Text))
+                all = false;
+            else if (string.IsNullOrEmpty(ProvBox.Text))
+                all = false;
+            else if (string.IsNullOrEmpty(CityBox.Text))
+                all = false;
 
-            file.WriteLine(" ");
-            file.WriteLine("=====================================");
-            file.WriteLine(" ");
-            file.Close();
+            if (ContactNo.Text.Length != 11)
+            {
+                MessageBox.Show("Information in Contact No. should contain 11 numbers.");
+            }
 
-            FirstN.Text = "";
-            MidN.Text = "";
-            LastN.Text = "";
-            Suffix.Text = "";
-            AgeBox.Text = "";
-            SexBox.Text = "";
-            TempBox.Text = "";
-            RegionPicker.Text = "";
-            ProvBox.Text = "";
-            CityBox.Text = "";
-            BrgyBox.Text = "";
-            EmailAd.Text = "";
-            ContactNo.Text = "";
-            DateandTime.Text = "";
-            VisitPurpose.Text = "";
+            if (all)
+            {
+                Form3 f3 = new Form3();
+                f3.Show();
+                this.Hide();
+            }
+            else
+                MessageBox.Show("Required information incomplete! Please answer the form accordingly!");
+            
+            if (all)
+            {
+                StreamWriter file = new StreamWriter(@"C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\RespondentsList.txt", true);
+                file.WriteLine("First Name: " + FirstN.Text);
+                file.WriteLine("Middle Name: " + MidN.Text);
+                file.WriteLine("Last Name: " + LastN.Text);
+                file.WriteLine("Suffix: " + Suffix.Text);
+                file.WriteLine("Age: " + AgeBox.Text);
+                file.WriteLine("Sex: " + SexBox.Text);
+                file.WriteLine("Body Temperature: " + TempBox.Text);
+                file.WriteLine("Region: " + RegionPicker.Text);
+                file.WriteLine("Province: " + ProvBox.Text);
+                file.WriteLine("Municilapity: " + CityBox.Text);
+                file.WriteLine("Barangay: " + BrgyBox.Text);
+                file.WriteLine("Email Address: " + EmailAd.Text);
+                file.WriteLine("Contact Number: " + ContactNo.Text);
+                file.WriteLine("Date and Time: " + DateandTime.Text);
+                file.WriteLine("Nature of Visit: " + VisitPurpose.Text);
 
 
-            Form3 f3 = new Form3();
-            f3.Show();
-            this.Hide();
+                file.WriteLine(" ");
+                file.WriteLine("=====================================");
+                file.WriteLine(" ");
+                file.Close();
+
+                FirstN.Text = "";
+                MidN.Text = "";
+                LastN.Text = "";
+                Suffix.Text = "";
+                AgeBox.Text = "";
+                SexBox.Text = "";
+                TempBox.Text = "";
+                RegionPicker.Text = "";
+                ProvBox.Text = "";
+                CityBox.Text = "";
+                BrgyBox.Text = "";
+                EmailAd.Text = "";
+                ContactNo.Text = "";
+                DateandTime.Text = "";
+                VisitPurpose.Text = "";
+
+            }
+            
+            
+
+
+
         }
 
         private void textBox10_TextChanged(object sender, EventArgs e)
@@ -88,7 +118,7 @@
 
         private void FirstN_Enter(object sender, EventArgs e)
         {
-            if (FirstN.Text == "JUAN")
+            if (FirstN.Text == "[JUAN]")
             {
                 FirstN.Text = "";
                 FirstN.ForeColor = Color.Black;
@@ -98,16 +128,16 @@
 
         private void FirstN_Leave(object sender, EventArgs e)
         {
-            if(FirstN.Text == "")
+            if (FirstN.Text == "")
             {
-                FirstN.Text = "JUAN";
+                FirstN.Text = "[JUAN]";
                 FirstN.ForeColor = Color.Silver;
             }
         }
 
         private void MidN_Enter(object sender, EventArgs e)
         {
-            if(MidN.Text == "PEREZ")
+            if (MidN.Text == "[PEREZ]")
             {
                 MidN.Text = "";
                 MidN.ForeColor = Color.Black;
@@ -123,14 +153,14 @@
         {
             if (MidN.Text == "")
             {
-                MidN.Text = "PEREZ";
+                MidN.Text = "[PEREZ]";
                 MidN.ForeColor = Color.Silver;
             }
         }
 
         private void Suffix_Enter(object sender, EventArgs e)
         {
-            if (Suffix.Text == "ex. JR., SR.")
+            if (Suffix.Text == "[ex. JR., SR.]")
             {
                 Suffix.Text = "";
                 Suffix.ForeColor = Color.Black;
@@ -141,14 +171,14 @@
         {
             if (Suffix.Text == "")
             {
-                Suffix.Text = "ex. JR., SR.";
+                Suffix.Text = "[ex. JR., SR.]";
                 Suffix.ForeColor = Color.Silver;
             }
         }
 
         private void LastN_Enter(object sender, EventArgs e)
         {
-            if (LastN.Text == "DELA CRUZ")
+            if (LastN.Text == "[DELA CRUZ]")
             {
                 LastN.Text = "";
                 LastN.ForeColor = Color.Black;
@@ -157,7 +187,7 @@
 
         private void EmailAd_Enter(object sender, EventArgs e)
         {
-            if (EmailAd.Text == "ex. username@gmail.com")
+            if (EmailAd.Text == "[ex. username@gmail.com]")
             {
                 EmailAd.Text = "";
                 EmailAd.ForeColor = Color.Black;
@@ -168,7 +198,7 @@
         {
             if (LastN.Text == "")
             {
-                LastN.Text = "DELA CRUZ";
+                LastN.Text = "[DELA CRUZ]";
                 LastN.ForeColor = Color.Silver;
             }
         }
@@ -177,14 +207,14 @@
         {
             if (EmailAd.Text == "")
             {
-                EmailAd.Text = "ex. username@gmail.com";
+                EmailAd.Text = "[ex. username@gmail.com]";
                 EmailAd.ForeColor = Color.Silver;
             }
         }
 
         private void ContactNo_Enter(object sender, EventArgs e)
         {
-            if (ContactNo.Text == "09459871236")
+            if (ContactNo.Text == "[09459871236]")
             {
                 ContactNo.Text = "";
                 ContactNo.ForeColor = Color.Black;
@@ -195,8 +225,26 @@
         {
             if (ContactNo.Text == "")
             {
-                ContactNo.Text = "09459871236";
+                ContactNo.Text = "[09459871236]";
                 ContactNo.ForeColor = Color.Silver;
+            }
+        }
+
+        private void TempBox_Enter(object sender, EventArgs e)
+        {
+            if (TempBox.Text == "°C")
+            {
+                TempBox.Text = "";
+                TempBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void TempBox_Leave(object sender, EventArgs e)
+        {
+            if (TempBox.Text == "")
+            {
+                TempBox.Text = "°C";
+                TempBox.ForeColor = Color.Silver;
             }
         }
     }

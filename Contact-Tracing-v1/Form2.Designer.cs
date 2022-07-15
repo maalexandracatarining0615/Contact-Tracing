@@ -224,7 +224,7 @@
             this.FirstN.Name = "FirstN";
             this.FirstN.Size = new System.Drawing.Size(205, 23);
             this.FirstN.TabIndex = 4;
-            this.FirstN.Text = "JUAN";
+            this.FirstN.Text = "[JUAN]";
             this.FirstN.Enter += new System.EventHandler(this.FirstN_Enter);
             this.FirstN.Leave += new System.EventHandler(this.FirstN_Leave);
             // 
@@ -235,7 +235,7 @@
             this.MidN.Name = "MidN";
             this.MidN.Size = new System.Drawing.Size(137, 23);
             this.MidN.TabIndex = 5;
-            this.MidN.Text = "PEREZ";
+            this.MidN.Text = "[PEREZ]";
             this.MidN.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.MidN.Enter += new System.EventHandler(this.MidN_Enter);
             this.MidN.Leave += new System.EventHandler(this.MidN_Leave);
@@ -247,7 +247,7 @@
             this.LastN.Name = "LastN";
             this.LastN.Size = new System.Drawing.Size(205, 23);
             this.LastN.TabIndex = 6;
-            this.LastN.Text = "DELA CRUZ";
+            this.LastN.Text = "[DELA CRUZ]";
             this.LastN.TextChanged += new System.EventHandler(this.LastN_TextChanged);
             this.LastN.Enter += new System.EventHandler(this.LastN_Enter);
             this.LastN.Leave += new System.EventHandler(this.LastN_Leave);
@@ -291,10 +291,14 @@
             // 
             // TempBox
             // 
+            this.TempBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.TempBox.Location = new System.Drawing.Point(338, 114);
             this.TempBox.Name = "TempBox";
             this.TempBox.Size = new System.Drawing.Size(74, 23);
             this.TempBox.TabIndex = 12;
+            this.TempBox.Text = "°C";
+            this.TempBox.Enter += new System.EventHandler(this.TempBox_Enter);
+            this.TempBox.Leave += new System.EventHandler(this.TempBox_Leave);
             // 
             // Region
             // 
@@ -386,7 +390,7 @@
             this.EmailAd.Name = "EmailAd";
             this.EmailAd.Size = new System.Drawing.Size(188, 23);
             this.EmailAd.TabIndex = 23;
-            this.EmailAd.Text = "ex. username@gmail.com";
+            this.EmailAd.Text = "[ex. username@gmail.com]";
             this.EmailAd.Enter += new System.EventHandler(this.EmailAd_Enter);
             this.EmailAd.Leave += new System.EventHandler(this.EmailAd_Leave);
             // 
@@ -397,7 +401,7 @@
             this.ContactNo.Name = "ContactNo";
             this.ContactNo.Size = new System.Drawing.Size(206, 23);
             this.ContactNo.TabIndex = 24;
-            this.ContactNo.Text = "09459871236";
+            this.ContactNo.Text = "[09459871236]";
             this.ContactNo.Enter += new System.EventHandler(this.ContactNo_Enter);
             this.ContactNo.Leave += new System.EventHandler(this.ContactNo_Leave);
             // 
@@ -548,7 +552,7 @@
             this.Suffix.Name = "Suffix";
             this.Suffix.Size = new System.Drawing.Size(46, 23);
             this.Suffix.TabIndex = 40;
-            this.Suffix.Text = "ex. JR., SR.";
+            this.Suffix.Text = "[ex. JR., SR.]";
             this.Suffix.Enter += new System.EventHandler(this.Suffix_Enter);
             this.Suffix.Leave += new System.EventHandler(this.Suffix_Leave);
             // 
@@ -567,19 +571,19 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(57, 331);
+            this.label12.Location = new System.Drawing.Point(35, 331);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(327, 13);
+            this.label12.Size = new System.Drawing.Size(355, 13);
             this.label12.TabIndex = 42;
-            this.label12.Text = "This simulation program is created by Ma. Alexandra A. Catarining, a Computer Eng" +
-    "ineering";
+            this.label12.Text = "This simulation application is programmed by Ma. Alexandra A. Catarining, a Compu" +
+    "ter Engineering";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(61, 345);
+            this.label13.Location = new System.Drawing.Point(51, 345);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(317, 13);
             this.label13.TabIndex = 43;

@@ -7,6 +7,7 @@ C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\obj\Debug\net6.
 C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\obj\Debug\net6.0-windows\Contact_Tracing_v1.Form1.resources
 C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\obj\Debug\net6.0-windows\Contact_Tracing_v1.ContactTracingForm.resources
 C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\obj\Debug\net6.0-windows\Contact_Tracing_v1.Form3.resources
+C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\obj\Debug\net6.0-windows\Contact_Tracing_v1.Form4.resources
 C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\obj\Debug\net6.0-windows\Contact_Tracing_v1.Properties.Resources.resources
 C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\obj\Debug\net6.0-windows\Contact-Tracing-v1.csproj.GenerateResource.cache
 C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\obj\Debug\net6.0-windows\Contact-Tracing-v1.GeneratedMSBuildEditorConfig.editorconfig

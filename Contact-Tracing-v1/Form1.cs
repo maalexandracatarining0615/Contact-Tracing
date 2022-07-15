@@ -31,8 +31,8 @@ namespace Contact_Tracing_v1
 
         private void button2linkedtoForm3_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
-            f3.Show();
+            Form4 f4 = new Form4();
+            f4.Show();
             this.Hide();
         }
     }

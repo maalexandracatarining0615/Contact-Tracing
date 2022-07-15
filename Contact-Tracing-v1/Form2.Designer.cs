@@ -74,6 +74,12 @@
             this.RegionPicker = new System.Windows.Forms.ComboBox();
             this.SexBox = new System.Windows.Forms.ComboBox();
             this.VisitPurpose = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Suffix = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -213,25 +219,38 @@
             // 
             // FirstN
             // 
+            this.FirstN.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.FirstN.Location = new System.Drawing.Point(12, 67);
             this.FirstN.Name = "FirstN";
             this.FirstN.Size = new System.Drawing.Size(205, 23);
             this.FirstN.TabIndex = 4;
+            this.FirstN.Text = "JUAN";
+            this.FirstN.Enter += new System.EventHandler(this.FirstN_Enter);
+            this.FirstN.Leave += new System.EventHandler(this.FirstN_Leave);
             // 
             // MidN
             // 
+            this.MidN.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.MidN.Location = new System.Drawing.Point(223, 67);
             this.MidN.Name = "MidN";
-            this.MidN.Size = new System.Drawing.Size(189, 23);
+            this.MidN.Size = new System.Drawing.Size(137, 23);
             this.MidN.TabIndex = 5;
+            this.MidN.Text = "PEREZ";
             this.MidN.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.MidN.Enter += new System.EventHandler(this.MidN_Enter);
+            this.MidN.Leave += new System.EventHandler(this.MidN_Leave);
             // 
             // LastN
             // 
+            this.LastN.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.LastN.Location = new System.Drawing.Point(12, 114);
             this.LastN.Name = "LastN";
             this.LastN.Size = new System.Drawing.Size(205, 23);
             this.LastN.TabIndex = 6;
+            this.LastN.Text = "DELA CRUZ";
+            this.LastN.TextChanged += new System.EventHandler(this.LastN_TextChanged);
+            this.LastN.Enter += new System.EventHandler(this.LastN_Enter);
+            this.LastN.Leave += new System.EventHandler(this.LastN_Leave);
             // 
             // Age
             // 
@@ -362,17 +381,25 @@
             // 
             // EmailAd
             // 
+            this.EmailAd.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.EmailAd.Location = new System.Drawing.Point(12, 243);
             this.EmailAd.Name = "EmailAd";
             this.EmailAd.Size = new System.Drawing.Size(188, 23);
             this.EmailAd.TabIndex = 23;
+            this.EmailAd.Text = "ex. username@gmail.com";
+            this.EmailAd.Enter += new System.EventHandler(this.EmailAd_Enter);
+            this.EmailAd.Leave += new System.EventHandler(this.EmailAd_Leave);
             // 
             // ContactNo
             // 
+            this.ContactNo.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.ContactNo.Location = new System.Drawing.Point(206, 243);
             this.ContactNo.Name = "ContactNo";
             this.ContactNo.Size = new System.Drawing.Size(206, 23);
             this.ContactNo.TabIndex = 24;
+            this.ContactNo.Text = "09459871236";
+            this.ContactNo.Enter += new System.EventHandler(this.ContactNo_Enter);
+            this.ContactNo.Leave += new System.EventHandler(this.ContactNo_Leave);
             // 
             // Time
             // 
@@ -496,10 +523,79 @@
             this.VisitPurpose.Size = new System.Drawing.Size(194, 23);
             this.VisitPurpose.TabIndex = 36;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(83, 329);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 15);
+            this.label2.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(81, 346);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 15);
+            this.label3.TabIndex = 39;
+            // 
+            // Suffix
+            // 
+            this.Suffix.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Suffix.Location = new System.Drawing.Point(366, 67);
+            this.Suffix.Name = "Suffix";
+            this.Suffix.Size = new System.Drawing.Size(46, 23);
+            this.Suffix.TabIndex = 40;
+            this.Suffix.Text = "ex. JR., SR.";
+            this.Suffix.Enter += new System.EventHandler(this.Suffix_Enter);
+            this.Suffix.Leave += new System.EventHandler(this.Suffix_Leave);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(367, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 14);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "SUFFIX";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(57, 331);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(327, 13);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "This simulation program is created by Ma. Alexandra A. Catarining, a Computer Eng" +
+    "ineering";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label13.Location = new System.Drawing.Point(61, 345);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(317, 13);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "student from Polytechnic University of the Philippines-Sta. Mesa during A.Y. 2021" +
+    "-2022.";
+            // 
             // ContactTracingForm
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(424, 448);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Suffix);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.VisitPurpose);
             this.Controls.Add(this.SexBox);
             this.Controls.Add(this.RegionPicker);
@@ -596,5 +692,11 @@
         private ComboBox RegionPicker;
         private ComboBox SexBox;
         private ComboBox VisitPurpose;
+        private Label label2;
+        private Label label3;
+        private TextBox Suffix;
+        private Label label4;
+        private Label label12;
+        private Label label13;
     }
 }

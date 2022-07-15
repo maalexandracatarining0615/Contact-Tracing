@@ -49,16 +49,14 @@
             this.MidN = new System.Windows.Forms.TextBox();
             this.LastN = new System.Windows.Forms.TextBox();
             this.Age = new System.Windows.Forms.Label();
-            this.Gender = new System.Windows.Forms.Label();
+            this.Sex = new System.Windows.Forms.Label();
             this.AgeBox = new System.Windows.Forms.TextBox();
-            this.GndrBox = new System.Windows.Forms.TextBox();
             this.Temp = new System.Windows.Forms.Label();
             this.TempBox = new System.Windows.Forms.TextBox();
             this.Region = new System.Windows.Forms.Label();
             this.Prov = new System.Windows.Forms.Label();
             this.City = new System.Windows.Forms.Label();
             this.Brgy = new System.Windows.Forms.Label();
-            this.RegionBox = new System.Windows.Forms.TextBox();
             this.ProvBox = new System.Windows.Forms.TextBox();
             this.CityBox = new System.Windows.Forms.TextBox();
             this.BrgyBox = new System.Windows.Forms.TextBox();
@@ -68,12 +66,14 @@
             this.ContactNo = new System.Windows.Forms.TextBox();
             this.Time = new System.Windows.Forms.Label();
             this.Purpose = new System.Windows.Forms.Label();
-            this.VisitPurpose = new System.Windows.Forms.TextBox();
             this.DateandTime = new System.Windows.Forms.DateTimePicker();
             this.Submit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.RegionPicker = new System.Windows.Forms.ComboBox();
+            this.SexBox = new System.Windows.Forms.ComboBox();
+            this.VisitPurpose = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -205,7 +205,7 @@
             // 
             this.LastName.AutoSize = true;
             this.LastName.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LastName.Location = new System.Drawing.Point(12, 93);
+            this.LastName.Location = new System.Drawing.Point(12, 97);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(62, 14);
             this.LastName.TabIndex = 3;
@@ -243,15 +243,15 @@
             this.Age.TabIndex = 7;
             this.Age.Text = "AGE";
             // 
-            // Gender
+            // Sex
             // 
-            this.Gender.AutoSize = true;
-            this.Gender.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Gender.Location = new System.Drawing.Point(273, 97);
-            this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(47, 14);
-            this.Gender.TabIndex = 8;
-            this.Gender.Text = "GENDER";
+            this.Sex.AutoSize = true;
+            this.Sex.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Sex.Location = new System.Drawing.Point(273, 97);
+            this.Sex.Name = "Sex";
+            this.Sex.Size = new System.Drawing.Size(25, 14);
+            this.Sex.TabIndex = 8;
+            this.Sex.Text = "SEX";
             // 
             // AgeBox
             // 
@@ -259,13 +259,6 @@
             this.AgeBox.Name = "AgeBox";
             this.AgeBox.Size = new System.Drawing.Size(44, 23);
             this.AgeBox.TabIndex = 9;
-            // 
-            // GndrBox
-            // 
-            this.GndrBox.Location = new System.Drawing.Point(273, 114);
-            this.GndrBox.Name = "GndrBox";
-            this.GndrBox.Size = new System.Drawing.Size(59, 23);
-            this.GndrBox.TabIndex = 10;
             // 
             // Temp
             // 
@@ -324,14 +317,6 @@
             this.Brgy.TabIndex = 16;
             this.Brgy.Text = "BARANGAY";
             this.Brgy.Click += new System.EventHandler(this.Brgy_Click);
-            // 
-            // RegionBox
-            // 
-            this.RegionBox.Location = new System.Drawing.Point(12, 157);
-            this.RegionBox.Name = "RegionBox";
-            this.RegionBox.Size = new System.Drawing.Size(108, 23);
-            this.RegionBox.TabIndex = 17;
-            this.RegionBox.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // ProvBox
             // 
@@ -409,13 +394,6 @@
             this.Purpose.TabIndex = 26;
             this.Purpose.Text = "NATURE OF VISIT";
             // 
-            // VisitPurpose
-            // 
-            this.VisitPurpose.Location = new System.Drawing.Point(218, 286);
-            this.VisitPurpose.Name = "VisitPurpose";
-            this.VisitPurpose.Size = new System.Drawing.Size(194, 23);
-            this.VisitPurpose.TabIndex = 28;
-            // 
             // DateandTime
             // 
             this.DateandTime.Location = new System.Drawing.Point(12, 286);
@@ -428,7 +406,7 @@
             this.Submit.BackColor = System.Drawing.Color.RoyalBlue;
             this.Submit.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Submit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Submit.Location = new System.Drawing.Point(151, 319);
+            this.Submit.Location = new System.Drawing.Point(151, 375);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(122, 31);
             this.Submit.TabIndex = 30;
@@ -441,7 +419,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(151, 349);
+            this.button1.Location = new System.Drawing.Point(151, 405);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 31);
             this.button1.TabIndex = 31;
@@ -452,7 +430,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Contact_Tracing_v1.Properties.Resources.contact_tracing_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 319);
+            this.pictureBox1.Location = new System.Drawing.Point(33, 375);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(72, 61);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -462,23 +440,74 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(318, 319);
+            this.pictureBox2.Location = new System.Drawing.Point(318, 375);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(66, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
             // 
+            // RegionPicker
+            // 
+            this.RegionPicker.FormattingEnabled = true;
+            this.RegionPicker.Items.AddRange(new object[] {
+            "REGION I (ILOCOS REGION)",
+            "REGION II (CAGAYAN VALLEY)",
+            "REGION III (CENTRAL LUZON)",
+            "REGION IV-A (CALABARZON)",
+            "REGION V (BICOL REGION)",
+            "REGION VI (WESTERN VISAYAS)",
+            "REGION VII (CENTRAL VISAYAS)",
+            "REGION VIII (EASTERN VISAYAS)",
+            "REGION IX (ZAMBOANGA PENINSULA)",
+            "REGION X (NORTHERN MINDANAO)",
+            "REGION XI (DAVAO REGION)",
+            "REGION XII (SOCCSKSARGEN)",
+            "NATIONAL CAPITAL REGION (NCR)",
+            "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+            "AUTONOMOUS REGION IN MUSLIM MINDANAO (ARMM)",
+            "REGION XIII (Caraga)",
+            "MIMAROPA REGION",
+            "NEGROS ISLAND REGION (NIR)"});
+            this.RegionPicker.Location = new System.Drawing.Point(12, 157);
+            this.RegionPicker.Name = "RegionPicker";
+            this.RegionPicker.Size = new System.Drawing.Size(108, 23);
+            this.RegionPicker.TabIndex = 34;
+            // 
+            // SexBox
+            // 
+            this.SexBox.FormattingEnabled = true;
+            this.SexBox.Items.AddRange(new object[] {
+            "FEMALE",
+            "MALE"});
+            this.SexBox.Location = new System.Drawing.Point(273, 114);
+            this.SexBox.Name = "SexBox";
+            this.SexBox.Size = new System.Drawing.Size(59, 23);
+            this.SexBox.TabIndex = 35;
+            // 
+            // VisitPurpose
+            // 
+            this.VisitPurpose.FormattingEnabled = true;
+            this.VisitPurpose.Items.AddRange(new object[] {
+            "PERSONAL",
+            "PROFESSIONAL APPOINTMENT"});
+            this.VisitPurpose.Location = new System.Drawing.Point(218, 286);
+            this.VisitPurpose.Name = "VisitPurpose";
+            this.VisitPurpose.Size = new System.Drawing.Size(194, 23);
+            this.VisitPurpose.TabIndex = 36;
+            // 
             // ContactTracingForm
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(424, 396);
+            this.ClientSize = new System.Drawing.Size(424, 448);
+            this.Controls.Add(this.VisitPurpose);
+            this.Controls.Add(this.SexBox);
+            this.Controls.Add(this.RegionPicker);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.DateandTime);
-            this.Controls.Add(this.VisitPurpose);
             this.Controls.Add(this.Purpose);
             this.Controls.Add(this.Time);
             this.Controls.Add(this.ContactNo);
@@ -488,16 +517,14 @@
             this.Controls.Add(this.BrgyBox);
             this.Controls.Add(this.CityBox);
             this.Controls.Add(this.ProvBox);
-            this.Controls.Add(this.RegionBox);
             this.Controls.Add(this.Brgy);
             this.Controls.Add(this.City);
             this.Controls.Add(this.Prov);
             this.Controls.Add(this.Region);
             this.Controls.Add(this.TempBox);
             this.Controls.Add(this.Temp);
-            this.Controls.Add(this.GndrBox);
             this.Controls.Add(this.AgeBox);
-            this.Controls.Add(this.Gender);
+            this.Controls.Add(this.Sex);
             this.Controls.Add(this.Age);
             this.Controls.Add(this.LastN);
             this.Controls.Add(this.MidN);
@@ -542,9 +569,8 @@
         private TextBox MidN;
         private TextBox LastN;
         private Label Age;
-        private Label Gender;
+        private Label Sex;
         private TextBox AgeBox;
-        private TextBox GndrBox;
         private Label Temp;
         private TextBox TempBox;
 #pragma warning disable CS0108 // 'ContactTracingForm.Region' hides inherited member 'Control.Region'. Use the new keyword if hiding was intended.
@@ -553,7 +579,6 @@
         private Label Prov;
         private Label City;
         private Label Brgy;
-        private TextBox RegionBox;
         private TextBox ProvBox;
         private TextBox CityBox;
         private TextBox BrgyBox;
@@ -563,11 +588,13 @@
         private TextBox ContactNo;
         private Label Time;
         private Label Purpose;
-        private TextBox VisitPurpose;
         private DateTimePicker DateandTime;
         private Button Submit;
         private Button button1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private ComboBox RegionPicker;
+        private ComboBox SexBox;
+        private ComboBox VisitPurpose;
     }
 }

@@ -1,18 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-
-
-
-namespace Contact_Tracing_v1
+﻿namespace Contact_Tracing_v1
 {
     public partial class ContactTracingForm : Form
     {
@@ -48,14 +34,14 @@ namespace Contact_Tracing_v1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            StreamWriter file = new StreamWriter(@"C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\RespondentsList.txt");
+            StreamWriter file = new StreamWriter(@"C:\Users\USER\source\repos\Contact-Tracing-v1\Contact-Tracing-v1\RespondentsList.txt", true);
             file.WriteLine("First Name: " + FirstN.Text);
             file.WriteLine("Middle Name: " + MidN.Text);
             file.WriteLine("Last Name: " + LastN.Text);
             file.WriteLine("Age: " + AgeBox.Text);
-            file.WriteLine("Gender: " + GndrBox.Text);
+            file.WriteLine("Sex: " + SexBox.Text);
             file.WriteLine("Body Temperature: " + TempBox.Text);
-            file.WriteLine("Region: " + RegionBox.Text);
+            file.WriteLine("Region: " + RegionPicker.Text);
             file.WriteLine("Province: " + ProvBox.Text);
             file.WriteLine("Municilapity: " + CityBox.Text);
             file.WriteLine("Barangay: " + BrgyBox.Text);
@@ -65,9 +51,25 @@ namespace Contact_Tracing_v1
             file.WriteLine("Nature of Visit: " + VisitPurpose.Text);
 
             file.WriteLine(" ");
-            file.WriteLine(" ===================");
+            file.WriteLine("=====================================");
             file.WriteLine(" ");
             file.Close();
+
+            FirstN.Text = "";
+            MidN.Text = "";
+            LastN.Text = "";
+            AgeBox.Text = "";
+            SexBox.Text = "";
+            TempBox.Text = "";
+            RegionPicker.Text = "";
+            ProvBox.Text = "";
+            CityBox.Text = "";
+            BrgyBox.Text = "";
+            EmailAd.Text = "";
+            ContactNo.Text = "";
+            DateandTime.Text = "";
+            VisitPurpose.Text = "";
+
 
             Form3 f3 = new Form3();
             f3.Show();

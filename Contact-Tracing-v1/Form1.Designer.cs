@@ -81,7 +81,7 @@
             this.button2linkedtoForm3.Name = "button2linkedtoForm3";
             this.button2linkedtoForm3.Size = new System.Drawing.Size(128, 30);
             this.button2linkedtoForm3.TabIndex = 3;
-            this.button2linkedtoForm3.Text = "CONTACT US";
+            this.button2linkedtoForm3.Text = "OTHERS";
             this.button2linkedtoForm3.UseVisualStyleBackColor = false;
             this.button2linkedtoForm3.Click += new System.EventHandler(this.button2linkedtoForm3_Click);
             // 

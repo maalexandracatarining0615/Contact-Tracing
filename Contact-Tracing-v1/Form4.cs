@@ -20,10 +20,7 @@ namespace Contact_Tracing_v1
         }
  
 
-        private void button1_Click(object sender, EventArgs e)
-        {
- 
-        }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -37,13 +34,7 @@ namespace Contact_Tracing_v1
             Application.Exit();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("http://doh.gov.ph");
-        }
     }
 
-    internal class button1
-    {
-    }
+
 }
